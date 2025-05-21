@@ -1,0 +1,97 @@
+.bubble-infos {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 96px;
+}
+
+.bubble-dates {
+  display: flex;
+  padding: 14px 28px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #000;
+  color: #fff;
+  font-family: "Suisse Intl";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bubble-place {
+  width: 327px;
+  color: #000;
+  font-family: "Suisse Intl";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bubble-main-infos {
+  position: absolute;
+  top: 297px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 883px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.bubble-title {
+  align-self: stretch;
+  color: #000;
+  text-align: center;
+  font-family: "Self Modern";
+  font-size: 85px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bubble-call-to-action {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #000;
+}
+
+.p,
+.bubble {
+  color: var(--noir, #000);
+  font-family: "Suisse Intl";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bubble-circles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 56px;
+}
+.bubble-circles-tot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.bubble-circles-text {
+  color: var(--noir, #000);
+  text-align: center;
+  font-family: "Suisse Intl";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

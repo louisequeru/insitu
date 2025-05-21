@@ -1,0 +1,26 @@
+.language-container {
+  display: flex;
+  gap: 35px;
+  font-family: "Suisse Intl";
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  margin-top: -1690px;
+  margin-left: 700px;
+  opacity: 0;
+}
+
+.language-btn {
+  border-radius: 50px;
+  border: 2px dashed #333;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 90px;
+  height: 90px;
+  font-size: 40px;
+}
+
+.language-btn.selected {
+  border: 2px solid #333;
+}

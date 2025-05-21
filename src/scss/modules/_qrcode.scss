@@ -1,0 +1,23 @@
+.qrcode-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1480px;
+  position: absolute;
+  opacity: 0;
+}
+
+.qrcode-title {
+  font-family: "Self Modern";
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.qrcode {
+  width: 160.164px;
+  height: 160.164px;
+  flex-shrink: 0;
+}

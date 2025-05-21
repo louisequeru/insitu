@@ -1,36 +1,112 @@
-window.addEventListener("load", () => {
-  const logo = document.querySelector(".logo");
+import gsap from "gsap";
 
-  function runAnimation() {
-    logo.style.transition = "none";
-    logo.style.transform = "translate(-50%, -50%)";
+const logo = document.querySelector(".logo");
+const screen = document.querySelector(".screen");
+if (logo) {
+  const logoRect = logo.getBoundingClientRect();
+  const screenRect = screen.getBoundingClientRect();
+  const translateX = (logoRect.x - screenRect.x + 230) * -1;
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        logo.style.transition = "transform 0.5s ease-in-out";
-        logo.style.transform =
-          "translate(-50%, -50%) translate(-40vw, -40vh) scale(0.3)";
+  var tl = gsap.timeline({ repeat: -1 });
+  tl.to(".logo", {
+    x: translateX,
+    y: -850,
+    scale: 0.2,
+    duration: 1.2,
+    delay: 3.6,
+    ease: "elastic.out(0.5,0.4)",
+  });
+  tl.to(".logo", {
+    x: 0,
+    y: 0,
+    scale: 1,
+    duration: 0,
+    delay: 17,
+  });
+}
 
-        // setTimeout(() => {
-        //   logo.style.transform =
-        //     "translate(-50%, -50%) translate(-40vw, -40vh) scale(0.3)";
-        // }, 4000);
+const event1 = document.querySelector(".event-1");
+const event2 = document.querySelector(".event-2");
+const event3 = document.querySelector(".event-3");
+console.log(event1);
 
-        setTimeout(() => {
-          logo.style.transition = "transform 0.3s ease-out";
-          logo.style.transform =
-            "translate(-50%, -50%) translate(-40vw, -40vh) scale(0.4)";
-        }, 500);
+var tl = gsap.timeline({ repeat: -1 });
+tl.to(event1, {
+  opacity: 0,
+  duration: 4.1,
+});
+tl.to(event1, {
+  opacity: 1,
+  duration: 0.3,
+});
+tl.to(event1, {
+  opacity: 0,
+  duration: 0.3,
+  delay: 5,
+});
+tl.to(event2, {
+  opacity: 1,
+  duration: 0.3,
+  delay: 0.7,
+});
+tl.to(event2, {
+  opacity: 0,
+  duration: 0.3,
+  delay: 5,
+});
+tl.to(event3, {
+  opacity: 1,
+  duration: 0.3,
+  delay: 0.7,
+});
+tl.to(event3, {
+  opacity: 0,
+  duration: 0.3,
+  delay: 5,
+});
 
-        setTimeout(() => {
-          logo.style.transition = "transform 0.3s ease-in";
-          logo.style.transform =
-            "translate(-50%, -50%) translate(-40vw, -40vh) scale(0.35)";
-        }, 700);
-      });
-    });
-  }
-  runAnimation();
+const languages = document.querySelector(".language-container");
 
-  setInterval(runAnimation, 17000);
+var tl = gsap.timeline({ repeat: -1 });
+tl.to(".language-container", {
+  opacity: 1,
+  delay: 3.6,
+});
+tl.to(".language-container", {
+  opacity: 0,
+  delay: 18,
+});
+
+const callToAction = document.querySelector(".main-call-to-action");
+
+var tl = gsap.timeline({ repeat: -1 });
+tl.to(".main-call-to-action", {
+  opacity: 1,
+  delay: 3.6,
+});
+tl.to(".main-call-to-action", {
+  opacity: 0,
+  delay: 18,
+});
+
+const qrCode = document.querySelector(".qrcode-container");
+
+var tl = gsap.timeline({ repeat: -1 });
+tl.to(".qrcode-container", {
+  opacity: 1,
+  delay: 3.6,
+});
+tl.to(".qrcode-container", {
+  opacity: 0,
+  delay: 18,
+});
+
+const buttons = document.querySelectorAll(".language-btn");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    buttons.forEach((b) => b.classList.remove("selected"));
+    btn.classList.add("selected");
+    console.log("Langue sélectionnée :", btn.dataset.lang);
+  });
 });
