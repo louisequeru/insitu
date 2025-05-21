@@ -77,14 +77,14 @@ tl.to(".language-container", {
   delay: 18,
 });
 
-const callToAction = document.querySelector(".main-call-to-action");
+const callToAction = document.querySelector(".events-button");
 
 var tl = gsap.timeline({ repeat: -1 });
-tl.to(".main-call-to-action", {
+tl.to(".events-button", {
   opacity: 1,
   delay: 3.6,
 });
-tl.to(".main-call-to-action", {
+tl.to(".events-button", {
   opacity: 0,
   delay: 18,
 });
